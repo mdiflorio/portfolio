@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import profileImage from "../assets/profile-image.png";
+import * as content from "../content/about";
 
 class About extends Component {
   render() {
@@ -8,16 +9,7 @@ class About extends Component {
         <div class="about">
           <img class="profile" src={profileImage} alt="Profile" />
           <h2>About</h2>
-          <p>
-            Current freelance React Native developer and computer science
-            student at Lycée Charles Poncet in France. A year’s worth of
-            experience specialising in Mobile Application development with a
-            production level project. Loves UI/UX and providing a great
-            experience for users. Thoroughly enjoys problem-solving and learning
-            new technologies. Outgoing and keen to learn from others. Thrives in
-            a team environment and is quick to adapt to any situation. Holder of
-            both Australian and EU passports.
-          </p>
+          <p>{content.about_EN}</p>
           <h2>Skills</h2>
           <ul>
             <li>
@@ -38,15 +30,9 @@ class About extends Component {
           </ul>
 
           <h2>Interests</h2>
-          <p>
-            Enjoys building new products and working with teams of motivated
-            people. Loves cooking and travelling around the world when possible.
-          </p>
+          <p>{content.interests_EN}</p>
           <h2>Seeking</h2>
-          <p>
-            Currently seeking a one-year internship for a
-            <i>Licence Professionnelle</i> in France, 2019-2020.
-          </p>
+          <p>{content.seeking_EN}</p>
           <h2>Résumé</h2>
           <p>
             You can find an up to date copy of Madhava Di Florio's résumé
