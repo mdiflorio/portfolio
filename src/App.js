@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Link, Route } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
@@ -12,6 +13,7 @@ class App extends Component {
 
   render() {
     const { language } = this.state;
+    const path = this.props.location.pathname;
     return (
       <div className="App">
         <div className="language-btns-container">
@@ -32,9 +34,15 @@ class App extends Component {
         <header>
           <h1>Madhava Di Florio</h1>
           <nav>
-            <Link to="/">Portfolio</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <Link className={path === "/" && "active"} to="/">
+              Portfolio
+            </Link>
+            <Link className={path === "/about" && "active"} to="/about">
+              About
+            </Link>
+            <Link className={path === "/contact" && "active"} to="/contact">
+              Contact
+            </Link>
           </nav>
         </header>
         <div className="portfolio">
@@ -64,4 +72,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
