@@ -10,33 +10,33 @@ import weather_img from "../assets/weatherwidget-SS.jpg";
 class Portfolio extends Component {
   render() {
     return (
-      <div class="container">
-        <div class="item">
+      <div className="container">
+        <div className="item">
           <a href="https://codepen.io/mierz/full/RgbaVZ/" target="_blank">
             <img src={simon_img} />
           </a>
         </div>
-        <div class="item">
+        <div className="item">
           <a href="https://codepen.io/mierz/full/zwEPXp/" target="_blank">
             <img src={calculator_img} />
           </a>
         </div>
-        <div class="item">
+        <div className="item">
           <a href="https://codepen.io/mierz/full/BZBymp/" target="_blank">
             <img src={tictactoe_img} />
           </a>
         </div>
-        <div class="item">
+        <div className="item">
           <a href="https://codepen.io/mierz/full/qmVwRK/" target="_blank">
             <img src={pomodoro_img} />
           </a>
         </div>
-        <div class="item">
+        <div className="item">
           <a href="https://codepen.io/mierz/full/bRqEPg/" target="_blank">
             <img src={gameoflife_img} />
           </a>
         </div>
-        <div class="item">
+        <div className="item">
           <a href="https://codepen.io/mierz/full/YZRjBN/" target="_blank">
             <img src={weather_img} />
           </a>
