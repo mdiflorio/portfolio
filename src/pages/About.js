@@ -37,7 +37,7 @@ class About extends Component {
           <h2>Résumé</h2>
           <p>
             You can find an up to date copy of Madhava Di Florio's résumé&nbsp;
-            <a href="./assets/resume.pdf" target="_blank">
+            <a href={resume} target="_blank">
               here.
             </a>
           </p>
