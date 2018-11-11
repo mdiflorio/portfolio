@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "bead63cf7227a836cc3b124599d34755",
-    "url": "/static/media/calculator-SS.bead63cf.jpg"
+    "revision": "9eadf0def88b29d0d28ecb3ffb3fa314",
+    "url": "/static/media/simon-SS.9eadf0de.jpg"
   },
   {
-    "revision": "ba2e011327634e33e51c",
-    "url": "/static/css/main.c4fd4cae.chunk.css"
+    "revision": "be9728082cc534a42bcc",
+    "url": "/static/css/main.0e8885a4.chunk.css"
   },
   {
-    "revision": "b1f9ac3f756a4cd9d118",
-    "url": "/static/js/1.b1f9ac3f.chunk.js"
+    "revision": "cf4857b3bfb39e103df2",
+    "url": "/static/js/1.cf4857b3.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -20,12 +20,16 @@ self.__precacheManifest = [
     "url": "/static/media/profile-image.94a84cfb.png"
   },
   {
-    "revision": "9eadf0def88b29d0d28ecb3ffb3fa314",
-    "url": "/static/media/simon-SS.9eadf0de.jpg"
+    "revision": "28c16de78c638493b9ecd66757316ce5",
+    "url": "/static/media/resume.28c16de7.pdf"
   },
   {
-    "revision": "ba2e011327634e33e51c",
-    "url": "/static/js/main.ba2e0113.chunk.js"
+    "revision": "be9728082cc534a42bcc",
+    "url": "/static/js/main.be972808.chunk.js"
+  },
+  {
+    "revision": "bead63cf7227a836cc3b124599d34755",
+    "url": "/static/media/calculator-SS.bead63cf.jpg"
   },
   {
     "revision": "e88c5a62fb74ba2b3588aa9f45c1935c",
@@ -44,7 +48,7 @@ self.__precacheManifest = [
     "url": "/static/media/weatherwidget-SS.3676a652.jpg"
   },
   {
-    "revision": "f566286710b2dceca6c143df29164f56",
+    "revision": "ee1fad828b62b0124efd43de086469e5",
     "url": "/index.html"
   }
 ];
