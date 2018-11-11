@@ -21,9 +21,27 @@ body header a {
 body header a:hover {
   color: #f39c12;
 }
-body header .current {
+
+body .active {
   color: #f39c12;
 }
+
+body .language-btns-container {
+  display: flex;
+  margin: 1rem 2rem 0 0;
+  justify-content: flex-end;
+  font-size: 1em;
+}
+body .language-btns-container button {
+  font-size: 1em;
+  margin: 0 5px 0 5px;
+  outline: none;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 body .portfolio {
   width: 100%;
   padding: 40px 0 40px 0;
