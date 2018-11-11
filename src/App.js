@@ -6,9 +6,29 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 
 class App extends Component {
+  state = {
+    language: "EN"
+  };
+
   render() {
+    const { language } = this.state;
     return (
       <div className="App">
+        <div className="language-btns-container">
+          <button
+            className={language === "EN" ? "active" : undefined}
+            onClick={() => this.setState({ language: "EN" })}
+          >
+            EN
+          </button>
+          /
+          <button
+            className={language === "FR" ? "active" : undefined}
+            onClick={() => this.setState({ language: "FR" })}
+          >
+            FR
+          </button>
+        </div>
         <header>
           <h1>Madhava Di Florio</h1>
           <nav>
@@ -17,7 +37,7 @@ class App extends Component {
             <Link to="/contact">Contact</Link>
           </nav>
         </header>
-        <div class="portfolio">
+        <div className="portfolio">
           <Switch>
             <Route exact path="/" component={Portfolio} />
             <Route path="/about" component={About} />
@@ -25,16 +45,16 @@ class App extends Component {
           </Switch>
         </div>
         <footer>
-          <div class="footer">
+          <div className="footer">
             <div>
-              <a href="https://github.com/mierz00" class="foot">
-                <i class="fa fa-github fa-2x " aria-hidden="true" />
+              <a href="https://github.com/mierz00" className="foot">
+                <i className="fa fa-github fa-2x " aria-hidden="true" />
               </a>
-              <a href="mailto:madhava.diflorio@gmail.com" class="foot">
-                <i class="fa fa-envelope fa-2x " aria-hidden="true" />
+              <a href="mailto:madhava.diflorio@gmail.com" className="foot">
+                <i className="fa fa-envelope fa-2x " aria-hidden="true" />
               </a>
-              <a href="https://www.freecodecamp.com/mierz00" class="foot">
-                <i class="fa fa-free-code-camp fa-2x " aria-hidden="true" />
+              <a href="https://www.freecodecamp.com/mierz00" className="foot">
+                <i className="fa fa-free-code-camp fa-2x " aria-hidden="true" />
               </a>
             </div>
           </div>

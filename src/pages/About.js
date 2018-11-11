@@ -5,9 +5,9 @@ import * as content from "../content/about";
 class About extends Component {
   render() {
     return (
-      <div class="container">
-        <div class="about">
-          <img class="profile" src={profileImage} alt="Profile" />
+      <div className="container">
+        <div className="about">
+          <img className="profile" src={profileImage} alt="Profile" />
           <h2>About</h2>
           <p>{content.about_EN}</p>
           <h2>Skills</h2>
@@ -35,7 +35,7 @@ class About extends Component {
           <p>{content.seeking_EN}</p>
           <h2>Résumé</h2>
           <p>
-            You can find an up to date copy of Madhava Di Florio's résumé
+            You can find an up to date copy of Madhava Di Florio's résumé&nbsp;
             <a href="./assets/resume.pdf" target="_blank">
               here.
             </a>
