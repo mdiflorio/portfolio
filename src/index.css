@@ -73,7 +73,7 @@ body .portfolio .container .item:active {
 body .portfolio .container .item img {
   width: 100%;
 }
-body .portfolio .container .about {
+body .portfolio .container .content-container {
   background: white;
   box-shadow: 0 10px 20px #202326;
   padding: 3rem 2rem 3rem 2rem;
@@ -82,18 +82,19 @@ body .portfolio .container .about {
   flex-direction: column;
   justify-content: flex-start;
 }
-body .portfolio .container .about h2 {
+
+body .portfolio .container .content-container h2 {
   font-family: "Quicksand", sans-serif;
   margin: 0;
   color: #f39c12;
 }
-body .portfolio .container .about img {
+body .portfolio .container .content-container img {
   align-self: center;
   width: 10rem;
   margin-bottom: 2rem;
   border-radius: 100%;
 }
-body .portfolio .container .about a {
+body .portfolio .container .content-container a {
   color: #f39c12;
   text-decoration: none;
 }
@@ -118,7 +119,7 @@ body footer .foot:hover {
   .item {
     margin: 20px 10px 20px 10px;
   }
-  .about {
+  .content-container {
     margin: 20px 10px 20px 10px;
   }
 }

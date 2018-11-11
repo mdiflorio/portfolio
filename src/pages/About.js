@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import profileImage from "../assets/profile-image.png";
 import * as content from "../content/about";
+import resume from "../assets/resume.pdf";
 
 class About extends Component {
   render() {
     return (
       <div className="container">
-        <div className="about">
+        <div className="content-container">
           <img className="profile" src={profileImage} alt="Profile" />
           <h2>About</h2>
           <p>{content.about_EN}</p>
