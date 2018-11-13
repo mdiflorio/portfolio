@@ -1,49 +1,47 @@
 import React, { Component } from "react";
+import Modal from "react-responsive-modal";
 
-import simon_img from "../assets/simon-SS.jpg";
-import calculator_img from "../assets/calculator-SS.jpg";
-import tictactoe_img from "../assets/tictactoe-SS.jpg";
-import pomodoro_img from "../assets/pomodoro-SS.jpg";
-import gameoflife_img from "../assets/gameoflife-SS.jpg";
-import weather_img from "../assets/weatherwidget-SS.jpg";
+import { portfolioContent } from "../content/portfolio";
 
 class Portfolio extends Component {
+  state = {
+    openModal: false,
+    selectedItem: {}
+  };
+
+  onOpenModal = item => {
+    this.setState({ openModal: true, selectedItem: item });
+  };
+
+  onCloseModal = () => {
+    this.setState({ openModal: false, selectedItem: {} });
+  };
+
   render() {
     return (
       <div className="container">
-        <div className="item">
-          <a href="https://codepen.io/mierz/full/RgbaVZ/" target="_blank">
-            <img src={simon_img} />
-          </a>
-        </div>
-        <div className="item">
-          <a href="https://codepen.io/mierz/full/zwEPXp/" target="_blank">
-            <img src={calculator_img} />
-          </a>
-        </div>
-        <div className="item">
-          <a href="https://codepen.io/mierz/full/BZBymp/" target="_blank">
-            <img src={tictactoe_img} />
-          </a>
-        </div>
-        <div className="item">
-          <a href="https://codepen.io/mierz/full/qmVwRK/" target="_blank">
-            <img src={pomodoro_img} />
-          </a>
-        </div>
-        <div className="item">
-          <a href="https://codepen.io/mierz/full/bRqEPg/" target="_blank">
-            <img src={gameoflife_img} />
-          </a>
-        </div>
-        <div className="item">
-          <a href="https://codepen.io/mierz/full/YZRjBN/" target="_blank">
-            <img src={weather_img} />
-          </a>
-        </div>
+        <Modal open={this.state.openModal} onClose={this.onCloseModal} center>
+          <SelectedItemContent item={this.state.selectedItem} />
+        </Modal>
+        {portfolioContent.map(item => (
+          <div className="item">
+            <button onClick={this.onOpenModal.bind(null, item)}>
+              <img src={item.img_src} alt={item.title} />
+            </button>
+          </div>
+        ))}
       </div>
     );
   }
 }
+
+const SelectedItemContent = ({ item }) => {
+  return (
+    <div>
+      <h2>{item.title}</h2>
+      <p>{item.desc}</p>
+    </div>
+  );
+};
 
 export default Portfolio;
