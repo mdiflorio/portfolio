@@ -117,6 +117,21 @@ body footer .foot {
 body footer .foot:hover {
   color: #f39c12;
 }
+
+.modalContainer {
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  width: 25rem; /* Or whatever */
+  margin: 2rem; /* Magic! */
+}
+
+.slider img {
+  width: 100%;
+}
+
 @media only screen and (max-width: 950px) {
   header h1 {
     margin: 0.5em;
