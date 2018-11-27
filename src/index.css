@@ -124,12 +124,34 @@ body footer .foot:hover {
 }
 
 .slider {
-  width: 25rem; /* Or whatever */
-  margin: 2rem; /* Magic! */
+  width: 25rem;
+  margin: 2.2rem;
+}
+.slick-slide,
+.slick-slide * {
+  outline: none !important;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: #000;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .slider img {
-  width: 100%;
+  align-self: center;
+  max-height: 500px;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 950px) {

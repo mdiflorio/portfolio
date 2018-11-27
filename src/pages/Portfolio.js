@@ -25,7 +25,7 @@ class Portfolio extends Component {
           <SelectedItemContent item={this.state.selectedItem} />
         </Modal>
         {portfolioContent.map(item => (
-          <div className="item">
+          <div className="item" key={item.title}>
             <button onClick={this.onOpenModal.bind(null, item)}>
               <img src={item.imgs[0]} alt={item.title} />
             </button>
@@ -50,8 +50,10 @@ const SelectedItemContent = ({ item }) => {
       <Slider {...settings} className="slider">
         {Object.keys(item).length > 0 &&
           item.imgs.map(image => (
-            <div>
-              <img src={image} />
+            <div key={image}>
+              <div className="imgContainer">
+                <img src={image} />
+              </div>
             </div>
           ))}
       </Slider>
