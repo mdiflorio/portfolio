@@ -34,13 +34,13 @@ class App extends Component {
         <header>
           <h1>Madhava Di Florio</h1>
           <nav>
-            <Link className={path === "/" && "active"} to="/">
+            <Link className={path === "/" ? "active" : ""} to="/">
               Portfolio
             </Link>
-            <Link className={path === "/about" && "active"} to="/about">
+            <Link className={path === "/about" ? "active" : ""} to="/about">
               About
             </Link>
-            <Link className={path === "/contact" && "active"} to="/contact">
+            <Link className={path === "/contact" ? "active" : ""} to="/contact">
               Contact
             </Link>
           </nav>
