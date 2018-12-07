@@ -47,9 +47,16 @@ class App extends Component {
         </header>
         <div className="portfolio">
           <Switch>
-            <Route exact path="/" component={Portfolio} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
+            <Route
+              exact
+              path="/"
+              render={() => <Portfolio language={language} />}
+            />
+            <Route path="/about" render={() => <About language={language} />} />
+            <Route
+              path="/contact"
+              render={() => <Contact language={language} />}
+            />
           </Switch>
         </div>
         <footer>
