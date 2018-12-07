@@ -118,40 +118,85 @@ body footer .foot:hover {
   color: #f39c12;
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 .modalContainer {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
 }
 
-.slider {
-  width: 25rem;
-  margin: 2.2rem;
-}
-.slick-slide,
-.slick-slide * {
-  outline: none !important;
+.modalContainer p {
+  white-space: pre-wrap;
 }
 
-.slick-track {
+.imgsContainer {
+  max-width: 1000px;
+  margin: 1rem;
+}
+
+.imgsContainer .mainImg {
+  height: auto;
+  width: 100%;
+}
+
+.imgsContainer .thumb {
+  width: 100%;
+  height: auto;
+}
+
+.imgBar {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.slick-next:before,
-.slick-prev:before {
-  color: #000;
+.imgBar button {
+  border: none;
+  background: white;
+  cursor: pointer;
+  outline: none;
 }
 
-.imgContainer {
+.imgBar button:active {
+  box-shadow: none;
+  transform: translateY(0.15em);
+  opacity: 0.75;
+}
+
+.toolIconsContainer {
   display: flex;
-  justify-content: center;
 }
-
-.slider img {
-  align-self: center;
-  max-height: 500px;
-  max-width: 100%;
+.toolIconsContainer i {
+  font-size: 2rem;
+  margin: 0.1em;
 }
 
 @media only screen and (max-width: 950px) {
@@ -163,5 +208,17 @@ body footer .foot:hover {
   }
   .content-container {
     margin: 20px 10px 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .imgsContainer {
+    margin: 0;
+  }
+
+  .modalContainer {
+    margin-top: 25px;
+    padding: 0;
+    flex-wrap: wrap;
   }
 }

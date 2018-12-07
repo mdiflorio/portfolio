@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import Modal from "react-responsive-modal";
-import Slider from "react-slick";
 
-import { portfolioContent } from "../content/portfolio";
+import content_en from "../content/portfolio/en";
+import content_fr from "../content/portfolio/fr";
 
 class Portfolio extends Component {
   state = {
     openModal: false,
-    selectedItem: {}
+    selectedItem: {},
+    selectedImgInModal: ""
   };
 
   onOpenModal = item => {
@@ -19,15 +20,20 @@ class Portfolio extends Component {
   };
 
   render() {
+    const { language } = this.props;
+    const content = language == "EN" ? content_en : content_fr;
     return (
       <div className="container">
         <Modal open={this.state.openModal} onClose={this.onCloseModal} center>
-          <SelectedItemContent item={this.state.selectedItem} />
+          <SelectedItemContent
+            item={this.state.selectedItem}
+            language={language}
+          />
         </Modal>
-        {portfolioContent.map(item => (
+        {content.map(item => (
           <div className="item" key={item.title}>
             <button onClick={this.onOpenModal.bind(null, item)}>
-              <img src={item.imgs[0]} alt={item.title} />
+              <img src={item.mainImg} alt={item.title} />
             </button>
           </div>
         ))}
@@ -36,33 +42,47 @@ class Portfolio extends Component {
   }
 }
 
-const SelectedItemContent = ({ item }) => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true
+class SelectedItemContent extends Component {
+  state = {
+    selectedImg: this.props.item.imgs[0]
   };
-  return (
-    <div className="modalContainer">
-      <Slider {...settings} className="slider">
-        {Object.keys(item).length > 0 &&
-          item.imgs.map(image => (
-            <div key={image}>
-              <div className="imgContainer">
-                <img src={image} />
-              </div>
-            </div>
-          ))}
-      </Slider>
-      <div>
-        <h2>{item.title}</h2>
-        <p>{item.desc}</p>
+
+  selectImg = selectedImg => {
+    this.setState({ selectedImg });
+  };
+
+  render() {
+    const { item, language } = this.props;
+    return (
+      <div className="modalContainer">
+        <div className="imgsContainer">
+          <img className="mainImg" src={this.state.selectedImg} />
+          <div className="imgBar">
+            {Object.keys(item).length > 0 &&
+              item.imgs.map(image => (
+                <button onClick={this.selectImg.bind(this, image)}>
+                  <img className="thumb" key={image} src={image} />
+                </button>
+              ))}
+          </div>
+        </div>
+        <div>
+          <h1>{item.title}</h1>
+          <p>{item.desc}</p>
+          <h2>{language == "EN" ? "Tools" : "Outils"}</h2>
+          <div className="toolIconsContainer">
+            {Object.keys(item).length > 0 &&
+              item.toolIcons.map(icon => (
+                <div className="tooltip">
+                  <span className="tooltiptext">{icon.name}</span>
+                  <i className={icon.icon} />
+                </div>
+              ))}
+          </div>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Portfolio;
