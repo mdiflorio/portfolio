@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import profileImage from "../assets/profile-image.png";
-import * as content from "../content/about";
+import content_en from "../content/about/en";
+import content_fr from "../content/about/fr";
 import resume from "../assets/resume.pdf";
 
 class About extends Component {
   render() {
+    const { language } = this.props;
+    const content = language == "EN" ? content_en : content_fr;
     return (
       <div className="container">
         <div className="content-container">
           <img className="profile" src={profileImage} alt="Profile" />
           <h2>About</h2>
-          <p>{content.about_EN}</p>
+          <p>{content.about}</p>
           <h2>Skills</h2>
           <ul>
             <li>
@@ -31,9 +34,9 @@ class About extends Component {
           </ul>
 
           <h2>Interests</h2>
-          <p>{content.interests_EN}</p>
+          <p>{content.interests}</p>
           <h2>Seeking</h2>
-          <p>{content.seeking_EN}</p>
+          <p>{content.seeking}</p>
           <h2>Résumé</h2>
           <p>
             You can find an up to date copy of Madhava Di Florio's résumé&nbsp;
