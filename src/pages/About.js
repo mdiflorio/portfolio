@@ -7,7 +7,7 @@ import resume from "../assets/resume.pdf";
 class About extends Component {
   render() {
     const { language } = this.props;
-    const content = language == "EN" ? content_en : content_fr;
+    const content = language === "EN" ? content_en : content_fr;
     return (
       <div className="container">
         <div className="content-container">

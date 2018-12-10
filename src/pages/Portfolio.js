@@ -21,7 +21,7 @@ class Portfolio extends Component {
 
   render() {
     const { language } = this.props;
-    const content = language == "EN" ? content_en : content_fr;
+    const content = language === "EN" ? content_en : content_fr;
     return (
       <div className="container">
         <Modal open={this.state.openModal} onClose={this.onCloseModal} center>
@@ -60,8 +60,8 @@ class SelectedItemContent extends Component {
           <div className="imgBar">
             {Object.keys(item).length > 0 &&
               item.imgs.map(image => (
-                <button onClick={this.selectImg.bind(this, image)}>
-                  <img className="thumb" key={image} src={image} />
+                <button onClick={this.selectImg.bind(this, image)} key={image}>
+                  <img className="thumb" src={image} />
                 </button>
               ))}
           </div>
@@ -69,11 +69,11 @@ class SelectedItemContent extends Component {
         <div>
           <h1>{item.title}</h1>
           <p>{item.desc}</p>
-          <h2>{language == "EN" ? "Tools" : "Outils"}</h2>
+          <h2>{language === "EN" ? "Tools" : "Outils"}</h2>
           <div className="toolIconsContainer">
             {Object.keys(item).length > 0 &&
               item.toolIcons.map(icon => (
-                <div className="tooltip">
+                <div className="tooltip" key={icon.name}>
                   <span className="tooltiptext">{icon.name}</span>
                   <i className={icon.icon} />
                 </div>
