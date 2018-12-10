@@ -8,6 +8,7 @@ class Contact extends Component {
     email: "",
     message: "",
     errors: {
+      formSubmit: false,
       name: "",
       email: "",
       message: ""
@@ -23,6 +24,7 @@ class Contact extends Component {
 
   handleClearErrors = () => {
     let errors = {
+      formSubmit: false,
       name: "",
       email: "",
       message: ""
@@ -34,6 +36,7 @@ class Contact extends Component {
     const { name, email, message } = this.state;
     let errorFound = false;
     let errors = {
+      formSubmit: false,
       name: "",
       email: "",
       message: ""
@@ -87,14 +90,31 @@ class Contact extends Component {
         message
       })
       .then(res => {
-        this.setState({ formEmailSent: true });
+        this.setState({ formEmailSent: true, formSubmitted: false });
+        setTimeout(() => {
+          this.setState({ formEmailSent: false, formSubmitted: false });
+        }, 5000);
       })
 
-      .catch(err => console.error("Failed to send feedback. Error: ", err));
+      .catch(err => {
+        console.error("Failed to send feedback. Error: ", err);
+        this.setState({
+          formEmailSent: false,
+          formSubmitted: false,
+          errors: { ...this.state.errors, formSubmit: true }
+        });
+      });
   };
 
   render() {
-    const { name, email, message, errors } = this.state;
+    const {
+      name,
+      email,
+      message,
+      errors,
+      formSubmitted,
+      formEmailSent
+    } = this.state;
     return (
       <div className="container">
         <div className="content-container contact">
@@ -107,7 +127,6 @@ class Contact extends Component {
             <input
               type="text"
               id="name"
-              name="name"
               placeholder="Your name.."
               onChange={this.handleInputChange}
               value={name}
@@ -118,7 +137,6 @@ class Contact extends Component {
             <input
               type="text"
               id="email"
-              name="email"
               placeholder="Your email.."
               onChange={this.handleInputChange}
               value={email}
@@ -130,14 +148,28 @@ class Contact extends Component {
             <textarea
               className="messageArea"
               id="message"
-              name="message"
               placeholder="Write something.."
               onChange={this.handleInputChange}
               value={message}
             />
 
-            <input type="submit" value="Submit" />
+            <button
+              type="submit"
+              value="Submit"
+              className={errors.formSubmit ? "errorBtn" : ""}
+            >
+              {errors.formSubmit ? "Retry" : "Submit"}
+              {formSubmitted && <i class="fa fa-refresh fa-spin" />}
+              {formEmailSent && <i class="fa fa-check" />}
+              {errors.formSubmit && <i class="fa fa-times" />}
+            </button>
           </form>
+          <p className="contactText">
+            Alternatively, you can contact me at{" "}
+            <a href="mailto:madhava.diflorio@gmail.com">
+              madhava.diflorio@gmail.com
+            </a>
+          </p>
         </div>
       </div>
     );
