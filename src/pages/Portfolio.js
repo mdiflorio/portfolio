@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Modal from "react-responsive-modal";
 
 import content_en from "../content/portfolio/en";
-import content_fr from "../content/portfolio/fr";
+import content_fr from "../content/portfolio/en";
 
 class Portfolio extends Component {
   state = {
@@ -16,7 +16,7 @@ class Portfolio extends Component {
   };
 
   onCloseModal = () => {
-    this.setState({ openModal: false, selectedItem: {} });
+    this.setState({ openModal: false });
   };
 
   render() {
@@ -56,9 +56,13 @@ class SelectedItemContent extends Component {
     return (
       <div className="modalContainer">
         <div className="imgsContainer">
-          <img className="mainImg" src={this.state.selectedImg} />
+          <img
+            className={item.imgs.length > 1 ? "mainImg" : "mainImgWide"}
+            src={this.state.selectedImg}
+          />
           <div className="imgBar">
             {Object.keys(item).length > 0 &&
+              item.imgs.length > 1 &&
               item.imgs.map(image => (
                 <button onClick={this.selectImg.bind(this, image)} key={image}>
                   <img className="thumb" src={image} />
