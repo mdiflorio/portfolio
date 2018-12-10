@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import profileImage from "../assets/profile-image.png";
 import content_en from "../content/about/en";
 import content_fr from "../content/about/fr";
-import resume from "../assets/resume.pdf";
+import resume from "../assets/resume-EN.pdf";
 
 class About extends Component {
   render() {
