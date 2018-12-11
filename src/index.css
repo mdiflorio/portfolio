@@ -95,7 +95,7 @@ body .portfolio .container .content-container img {
   margin-bottom: 2rem;
   border-radius: 100%;
 }
-body .portfolio .container .content-container a {
+body a {
   color: #f39c12;
   text-decoration: none;
 }
