@@ -72,7 +72,7 @@ class SelectedItemContent extends Component {
         </div>
         <div>
           <h1>{item.title}</h1>
-          <p>{item.desc}</p>
+          <p dangerouslySetInnerHTML={{ __html: item.desc }} />
           <h2>{language === "EN" ? "Tools" : "Outils"}</h2>
           <div className="toolIconsContainer">
             {Object.keys(item).length > 0 &&
