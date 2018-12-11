@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="language-btns-container">
-          <button
+          {/* <button
             className={language === "EN" ? "active" : undefined}
             onClick={() => this.setState({ language: "EN" })}
           >
@@ -29,7 +29,7 @@ class App extends Component {
             onClick={() => this.setState({ language: "FR" })}
           >
             FR
-          </button>
+          </button> */}
         </div>
         <header>
           <h1>Madhava Di Florio</h1>
