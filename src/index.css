@@ -203,6 +203,7 @@ body footer .foot:hover {
 
 .toolIconsContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 .toolIconsContainer i {
   font-size: 2rem;
