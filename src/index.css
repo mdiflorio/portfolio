@@ -103,6 +103,7 @@ body .portfolio .container button {
   border: none;
   outline: none;
   cursor: pointer;
+  background-color: transparent;
 }
 body footer .footer {
   margin: 3% 0 5% 0;
