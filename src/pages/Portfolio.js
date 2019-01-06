@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Modal from "react-responsive-modal";
 
 import content_en from "../content/portfolio/en";
-import content_fr from "../content/portfolio/en";
+import content_fr from "../content/portfolio/fr";
 
 class Portfolio extends Component {
   state = {

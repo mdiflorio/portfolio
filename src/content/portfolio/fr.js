@@ -1,6 +1,23 @@
 export default [
   {
-    title: "Application uConnected",
+    title: "Visa Restrictions",
+    mainImg: require("../../assets/visa-restrictions/1.jpg"),
+    imgs: [require("../../assets/visa-restrictions/1.jpg")],
+    desc: `Le <a href="http://visarequired.info" target="_blank">visarequired.info</a> est un site Web qui vous permet de sélectionner une nationalité et d'obtenir les conditions de visa pour différents pays. Le site est composé de trois parties.\n\nLa première partie est un scraper Web NodeJS qui traverse Wikipedia à la recherche d'informations sur les visas pour toutes les nationalités. Il utilise une implémentation de jQuery pour sélectionner des données dans des tableaux situés sur des pages Wikipedia. Ce Web Scraper nettoie et stocke automatiquement les données sur un serveur MySQL situé à gearhost.com. Le code pour le Web Scraper peut être trouvé <a target="_blank" href="https://github.com/mierz00/visa-webscraper">ici</a>.\n\nLa deuxième partie est une API ExpressJS hébergée sur Heroku. Cette API permet d'accéder aux informations de la base de données MySQL. L'API est disponible à l'adresse https://visa-info-api.herokuapp.com et le code source se trouve <a target="_blank" href="https://github.com/mierz00/visa-info-api">ici</a>.\n\nLa dernière partie est un site Web frontal React qui utilise des pages GitHub pour l'hébergement. Le site Web se connecte à l'API ExpressJS. Vous pouvez trouver le code source <a target="_blank" href="https://github.com/mierz00/visa-info-site">ici</a>.`,
+    toolIcons: [
+      { name: "NodeJS", icon: "devicon-nodejs-plain" },
+      { name: "ExpressJS", icon: "devicon-express-original" },
+      { name: "MySQL", icon: "devicon-mysql-plain" },
+      { name: "Heroku", icon: "devicon-heroku-original" },
+      { name: "React", icon: "devicon-react-original" },
+      { name: "jQuery", icon: "devicon-jquery-plain" },
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "SCSS", icon: "devicon-sass-plain" },
+      { name: "Git", icon: "devicon-git-plain" }
+    ]
+  },
+  {
+    title: "uConnected Application",
     mainImg: require("../../assets/uconnected/1.png"),
     imgs: [
       require("../../assets/uconnected/2.png"),
@@ -10,74 +27,66 @@ export default [
       require("../../assets/uconnected/4.png"),
       require("../../assets/uconnected/5.png")
     ],
-    desc: `Une application IOS et Android construite à l’aide de React Native pour uConnected. L'application permet aux clients de uConnected de se connecter et de passer des appels via leur service VoIP. Elle comprend diverses fonctionnalités telles que l'authentification de l'utilisateur, l'accès à la liste de contacts de l'appareil avec une liste de défilement alphabétique, un clavier et l'intégration du tableau de bord de uConnected.\n\nL'application intègre diverses bibliothèques telles que Redux, React Native Navigation et PJSIP Native React. Il contient une gamme d'animations pour garantir une expérience utilisateur fluide et en ligne avec une expérience utilisateur native.`,
+    desc: `Une application IOS et Android construite à l’aide de React Native pour uConnected. L'application permet aux clients d'uConnected de se connecter et de passer des appels via leur service VoIP. Elle comprend diverses fonctionnalités telles que l'authentification de l'utilisateur, l'accès à la liste de contacts de l'appareil avec une liste de défilement alphabétique, un clavier et l'intégration du tableau de bord de uConnected.\n\nL'application intègre diverses bibliothèques telles que Redux, React Native Navigation et PJSIP Native React. Il contient une série d’animations qui garantissent une expérience utilisateur fluide et en ligne avec une expérience utilisateur native.\n\nVous pouvez visiter le site Web de uConnected <a href="https://www.uconnected.com.au">ici</a>.`,
     toolIcons: [
       { name: "React Native", icon: "devicon-react-original" },
       { name: "HTML", icon: "devicon-html5-plain" },
       { name: "CSS", icon: "devicon-css3-plain" },
-      { name: "Apple", icon: "devicon-apple-plain" },
+      { name: "IOS", icon: "devicon-apple-plain" },
       { name: "Android", icon: "devicon-android-plain" },
       { name: "Git", icon: "devicon-git-plain" }
     ]
   },
   {
-    title: "ELSEWHERE",
-    mainImg: require("../../assets/uconnected/1.png"),
-    imgs: [
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg")
+    title: "Showcase backend",
+    mainImg: require("../../assets/showcase-backend/1.jpg"),
+    imgs: [require("../../assets/showcase-backend/1.jpg")],
+    toolIcons: [
+      { name: "TypeScript", icon: "devicon-typescript-plain" },
+      { name: "NodeJS", icon: "devicon-nodejs-plain" },
+      { name: "MongoDB", icon: "devicon-mongodb-plain" },
+      { name: "ExpressJS", icon: "devicon-express-original" }
     ],
     desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac metus ut mi vulputate sollicitudin. Pellentesque auctor interdum pulvinar. Suspendisse vitae venenatis libero. Mauris hendrerit lacus ac ligula luctus porta. Integer accumsan ullamcorper sollicitudin. Praesent auctor urna sit amet auctor sollicitudin. Suspendisse eu nulla eleifend, euismod velit sed, cursus nibh. Duis blandit quis est eget blandit. Etiam a est ac diam placerat efficitur et ac elit. Sed ac vulputate leo. Maecenas augue elit, dignissim id enim ac, cursus luctus risus. Vestibulum luctus molestie libero, ut tristique augue porttitor eget. Donec a nisl commodo urna accumsan fermentum ac non orci. Vivamus est eros, pretium et hendrerit ac, ornare ac magna. Vivamus vitae mauris eu enim tincidunt dictum. Cras non elit vitae justo aliquam sagittis."
+      "Une application back-end Node JS et MongoDB qui permet aux utilisateurs de créer, lire, mettre à jour et supprimer un portefeuille. Cette API a été écrite en conjonction avec une application IOS mais peut facilement être utilisée avec une interface Web.\n\nLe stockage sécurisé des comptes utilisateur avec des mots de passe hachés à l'aide de la bibliothèque Bcrypt. Stockage des images et des descriptions pour les éléments de portefeuille uniquement accessibles aux utilisateurs authentifiés."
+  },
+
+  {
+    title: "Tic Tac Toe",
+    mainImg: require("../../assets/tictactoe/1.jpg"),
+    imgs: [require("../../assets/tictactoe/1.jpg")],
+    toolIcons: [
+      { name: "React", icon: "devicon-react-original" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" }
+    ],
+    desc: `Tic Tac Toe est une application de React qui permet à l'utilisateur de jouer au célèbre jeu Tic Tac Toe contre l'ordinateur. Le jeu est actuellement imbattable car il utilise l'algorithme Mini Max pour parcourir tous les jeux possibles du jeu. J'ai écrit cette application pour mieux comprendre React et comment animer les modifications apportées aux composants.\n\nVous pouvez trouver le code source et jouer au jeu ici sur <a href="https://codepen.io/mierz/full/BZBymp/">CodePen</a>.`
+  },
+
+  {
+    title: "Simon Game",
+    mainImg: require("../../assets/simon-game/1.jpg"),
+    imgs: [require("../../assets/simon-game/1.jpg")],
+    desc: `Ceci est ma version du jeu électronique populaire de 1978, Simon, qui teste la mémoire du joueur. Le jeu montre une série de lumières et de sons dans lesquels le joueur doit mémoriser et répéter dans l'ordre. Construit en utilisant jQuery, le jeu consiste en un mode normal qui permet au joueur de faire une erreur puis il répète la dernière séquence. Le mode strict réinitialise le compte à 0 en cas d'erreur.\n\nVous pouvez jouer au jeu et afficher le code source ici à <a href="https: //codepen.io/mierz/pen/RgbaVZ">CodePen</a>.`,
+    toolIcons: [
+      { name: "jQuery", icon: "devicon-jquery-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" }
+    ]
   },
   {
-    title: "Play it safe",
-    mainImg: require("../../assets/uconnected/1.png"),
-    imgs: [
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg")
+    title: "Calculator",
+    mainImg: require("../../assets/calculator/1.jpg"),
+    imgs: [require("../../assets/calculator/1.jpg")],
+    toolIcons: [
+      { name: "jQuery", icon: "devicon-jquery-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "HTML", icon: "devicon-html5-plain" },
+      { name: "CSS", icon: "devicon-css3-plain" },
+      { name: "Bootstrap", icon: "devicon-bootstrap-plain" }
     ],
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac metus ut mi vulputate sollicitudin. Pellentesque auctor interdum pulvinar. Suspendisse vitae venenatis libero. Mauris hendrerit lacus ac ligula luctus porta. Integer accumsan ullamcorper sollicitudin. Praesent auctor urna sit amet auctor sollicitudin. Suspendisse eu nulla eleifend, euismod velit sed, cursus nibh. Duis blandit quis est eget blandit. Etiam a est ac diam placerat efficitur et ac elit. Sed ac vulputate leo. Maecenas augue elit, dignissim id enim ac, cursus luctus risus. Vestibulum luctus molestie libero, ut tristique augue porttitor eget. Donec a nisl commodo urna accumsan fermentum ac non orci. Vivamus est eros, pretium et hendrerit ac, ornare ac magna. Vivamus vitae mauris eu enim tincidunt dictum. Cras non elit vitae justo aliquam sagittis."
-  },
-  {
-    title: "Thatisit!",
-    mainImg: require("../../assets/uconnected/1.png"),
-    imgs: [
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg")
-    ],
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac metus ut mi vulputate sollicitudin. Pellentesque auctor interdum pulvinar. Suspendisse vitae venenatis libero. Mauris hendrerit lacus ac ligula luctus porta. Integer accumsan ullamcorper sollicitudin. Praesent auctor urna sit amet auctor sollicitudin. Suspendisse eu nulla eleifend, euismod velit sed, cursus nibh. Duis blandit quis est eget blandit. Etiam a est ac diam placerat efficitur et ac elit. Sed ac vulputate leo. Maecenas augue elit, dignissim id enim ac, cursus luctus risus. Vestibulum luctus molestie libero, ut tristique augue porttitor eget. Donec a nisl commodo urna accumsan fermentum ac non orci. Vivamus est eros, pretium et hendrerit ac, ornare ac magna. Vivamus vitae mauris eu enim tincidunt dictum. Cras non elit vitae justo aliquam sagittis."
-  },
-  {
-    title: "Ketboard",
-    mainImg: require("../../assets/uconnected/1.png"),
-    imgs: [
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg")
-    ],
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac metus ut mi vulputate sollicitudin. Pellentesque auctor interdum pulvinar. Suspendisse vitae venenatis libero. Mauris hendrerit lacus ac ligula luctus porta. Integer accumsan ullamcorper sollicitudin. Praesent auctor urna sit amet auctor sollicitudin. Suspendisse eu nulla eleifend, euismod velit sed, cursus nibh. Duis blandit quis est eget blandit. Etiam a est ac diam placerat efficitur et ac elit. Sed ac vulputate leo. Maecenas augue elit, dignissim id enim ac, cursus luctus risus. Vestibulum luctus molestie libero, ut tristique augue porttitor eget. Donec a nisl commodo urna accumsan fermentum ac non orci. Vivamus est eros, pretium et hendrerit ac, ornare ac magna. Vivamus vitae mauris eu enim tincidunt dictum. Cras non elit vitae justo aliquam sagittis."
-  },
-  {
-    title: "SAuf",
-    mainImg: require("../../assets/uconnected/1.png"),
-    imgs: [
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg"),
-      require("../../assets/gameoflife-SS.jpg")
-    ],
-    desc:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac metus ut mi vulputate sollicitudin. Pellentesque auctor interdum pulvinar. Suspendisse vitae venenatis libero. Mauris hendrerit lacus ac ligula luctus porta. Integer accumsan ullamcorper sollicitudin. Praesent auctor urna sit amet auctor sollicitudin. Suspendisse eu nulla eleifend, euismod velit sed, cursus nibh. Duis blandit quis est eget blandit. Etiam a est ac diam placerat efficitur et ac elit. Sed ac vulputate leo. Maecenas augue elit, dignissim id enim ac, cursus luctus risus. Vestibulum luctus molestie libero, ut tristique augue porttitor eget. Donec a nisl commodo urna accumsan fermentum ac non orci. Vivamus est eros, pretium et hendrerit ac, ornare ac magna. Vivamus vitae mauris eu enim tincidunt dictum. Cras non elit vitae justo aliquam sagittis."
+    desc: `Construite à l'aide de jQuery, cette application Web pour calculatrice a été écrite pour mieux comprendre jQuery et le positionnement des éléments HTML tout en combinant des opérations simples dans une interface utilisateur.\n\nVous pouvez afficher l'application Web <a href="https://codepen.io/mierz/pen/zwEPXp">ici</a>.`
   }
 ];
