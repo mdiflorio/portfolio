@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+import content_en from "../content/contact/en";
+import content_fr from "../content/contact/fr";
+
 class Contact extends Component {
   state = {
     formEmailSent: false,
@@ -14,6 +17,12 @@ class Contact extends Component {
       message: ""
     }
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.language !== this.props.language) {
+      this.handleClearErrors();
+    }
+  }
 
   handleInputChange = event => {
     const target = event.target;
@@ -34,6 +43,9 @@ class Contact extends Component {
 
   handleFormValidation = () => {
     const { name, email, message } = this.state;
+    const { language } = this.props;
+    const content = language === "EN" ? content_en : content_fr;
+
     let errorFound = false;
     let errors = {
       formSubmit: false,
@@ -43,18 +55,18 @@ class Contact extends Component {
     };
 
     if (name.length === 0) {
-      errors.name = "Please enter your name.";
+      errors.name = content.error_name;
       errorFound = true;
     }
 
     let re = /\S+@\S+\.\S+/;
     if (!re.test(email)) {
-      errors.email = "Please enter a valid email address";
+      errors.email = content.error_email;
       errorFound = true;
     }
 
     if (message.length === 0) {
-      errors.message = "The message field cannot be empty";
+      errors.message = content.error_message;
       errorFound = true;
     }
 
@@ -115,19 +127,22 @@ class Contact extends Component {
       formSubmitted,
       formEmailSent
     } = this.state;
+
+    const { language } = this.props;
+    const content = language === "EN" ? content_en : content_fr;
     return (
       <div className="container">
         <div className="content-container contact">
-          <h2>Contact me</h2>
+          <h2>{content.title}</h2>
 
           <form className="contact_form" onSubmit={this.handleSubmit}>
-            <label>Name</label>
+            <label>{content.name_title}</label>
             <br />
             <label className="error">{errors.name}</label>
             <input
               type="text"
               id="name"
-              placeholder="Your name.."
+              placeholder={content.name_placeholder}
               onChange={this.handleInputChange}
               value={name}
             />
@@ -137,7 +152,7 @@ class Contact extends Component {
             <input
               type="text"
               id="email"
-              placeholder="Your email.."
+              placeholder={content.email_placeholder}
               onChange={this.handleInputChange}
               value={email}
             />
@@ -148,7 +163,7 @@ class Contact extends Component {
             <textarea
               className="messageArea"
               id="message"
-              placeholder="Write something.."
+              placeholder={content.message_placeholder}
               onChange={this.handleInputChange}
               value={message}
             />
@@ -165,7 +180,7 @@ class Contact extends Component {
             </button>
           </form>
           <p className="contactText">
-            Alternatively, you can contact me at{" "}
+            {content.alternative_text}{" "}
             <a href="mailto:madhava.diflorio@gmail.com">
               madhava.diflorio@gmail.com
             </a>

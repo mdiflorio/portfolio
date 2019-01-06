@@ -236,9 +236,9 @@ textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-button[type="submit"] {
+.contact button[type="submit"] {
   font-size: 0.8em;
-  background-color: #5697ff;
+  background-color: #5697ff !important;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -246,24 +246,24 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"] i {
+.contact button[type="submit"] i {
   margin-left: 10px;
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-button[type="submit"]:hover {
+.contact button[type="submit"]:hover {
   background-color: #3d7ce2;
 }
 
-.error {
+.contact .error {
   color: tomato;
 }
 
-.errorBtn {
+.contact .errorBtn {
   background-color: tomato !important;
 }
 
-.contactText {
+.contact .contactText {
   color: grey;
   font-size: 0.8em;
 }
