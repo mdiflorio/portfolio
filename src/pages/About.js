@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import profileImage from "../assets/profile-image.png";
 import content_en from "../content/about/en";
 import content_fr from "../content/about/fr";
-import resume from "../assets/resume-EN.pdf";
 
 class About extends Component {
   render() {
@@ -25,8 +24,8 @@ class About extends Component {
               Native, jQuery, HTML5, CSS.
             </li>
             <li>
-              <strong>Programming</strong>&nbsp;&nbsp;&nbsp;&nbsp;JavaScript, C,
-              C++, Objective-C, Swift.
+              <strong>Programmation</strong>&nbsp;&nbsp;&nbsp;&nbsp;JavaScript,
+              C, C++, Objective-C, Swift.
             </li>
             <li>
               <strong>Languages</strong>&nbsp;&nbsp;&nbsp;&nbsp;English, French.
@@ -37,13 +36,6 @@ class About extends Component {
           <p>{content.interests}</p>
           <h2>Seeking</h2>
           <p>{content.seeking}</p>
-          <h2>Résumé</h2>
-          <p>
-            You can find an up to date copy of Madhava Di Florio's résumé&nbsp;
-            <a href={resume} target="_blank">
-              here.
-            </a>
-          </p>
         </div>
       </div>
     );
