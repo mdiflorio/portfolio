@@ -5,8 +5,7 @@ export default {
     production level project. Loves UI/UX and providing a great
     experience for users. Thoroughly enjoys problem-solving and learning
     new technologies. Outgoing and keen to learn from others. Thrives in
-    a team environment and is quick to adapt to any situation. Holder of
-    both Australian and EU passports.`,
+    a team environment and is quick to adapt to any situation. Able to work both in Australia and the European Union.`,
 
   interests: `Enjoys building new products and working with teams of motivated
     people. Loves cooking and travelling around the world when possible.`,

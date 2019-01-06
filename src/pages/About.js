@@ -11,9 +11,9 @@ class About extends Component {
       <div className="container">
         <div className="content-container">
           <img className="profile" src={profileImage} alt="Profile" />
-          <h2>About</h2>
+          <h2>{language === "EN" ? "About me" : "Sommaire"}</h2>
           <p>{content.about}</p>
-          <h2>Skills</h2>
+          <h2>{language === "EN" ? "Skills" : "Compétences"}</h2>
           <ul>
             <li>
               <strong>Back-end</strong>&nbsp;&nbsp;&nbsp;&nbsp;Node.js, Express,
@@ -24,17 +24,20 @@ class About extends Component {
               Native, jQuery, HTML5, CSS.
             </li>
             <li>
-              <strong>Programmation</strong>&nbsp;&nbsp;&nbsp;&nbsp;JavaScript,
-              C, C++, Objective-C, Swift.
+              <strong>
+                {language === "EN" ? "Programming" : "Programmation"}
+              </strong>
+              &nbsp;&nbsp;&nbsp;&nbsp;JavaScript, C, C++, Objective-C, Swift.
             </li>
             <li>
-              <strong>Languages</strong>&nbsp;&nbsp;&nbsp;&nbsp;English, French.
+              <strong>{language === "EN" ? "Languages" : "Langues"}</strong>
+              &nbsp;&nbsp;&nbsp;&nbsp;English, French.
             </li>
           </ul>
 
-          <h2>Interests</h2>
+          <h2>{language === "EN" ? "Interests" : "Intérêts"}</h2>
           <p>{content.interests}</p>
-          <h2>Seeking</h2>
+          <h2>{language === "EN" ? "Seeking" : "À la recherche de"}</h2>
           <p>{content.seeking}</p>
         </div>
       </div>

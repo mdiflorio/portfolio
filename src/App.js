@@ -38,7 +38,7 @@ class App extends Component {
               Portfolio
             </Link>
             <Link className={path === "/about" ? "active" : ""} to="/about">
-              About
+              {language === "EN" ? "About" : "CV"}
             </Link>
             <Link className={path === "/contact" ? "active" : ""} to="/contact">
               Contact
