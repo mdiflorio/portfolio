@@ -27,7 +27,7 @@ export default [
       require("../../assets/uconnected/4.png"),
       require("../../assets/uconnected/5.png")
     ],
-    desc: `Une application IOS et Android construite à l’aide de React Native pour uConnected. L'application permet aux clients d'uConnected de se connecter et de passer des appels via leur service VoIP. Elle comprend diverses fonctionnalités telles que l'authentification de l'utilisateur, l'accès à la liste de contacts de l'appareil avec une liste de défilement alphabétique, un clavier et l'intégration du tableau de bord de uConnected.\n\nL'application intègre diverses bibliothèques telles que Redux, React Native Navigation et PJSIP Native React. Il contient une série d’animations qui garantissent une expérience utilisateur fluide et en ligne avec une expérience utilisateur native.\n\nVous pouvez visiter le site Web de uConnected <a href="https://www.uconnected.com.au">ici</a>.`,
+    desc: `Une application IOS et Android construite à l’aide de React Native pour uConnected. L'application permet aux clients d'uConnected de se connecter et de passer des appels via leur service VoIP. Elle comprend diverses fonctionnalités telles que l'authentification de l'utilisateur, l'accès à la liste de contacts de l'appareil avec une liste de défilement alphabétique, un clavier et l'intégration du tableau de bord de uConnected.\n\nL'application intègre diverses bibliothèques telles que Redux, React Native Navigation et PJSIP Native React. Il contient une série d’animations qui garantissent une expérience utilisateur fluide et en ligne avec une expérience utilisateur native.\n\nVous pouvez visiter le site Web de uConnected <a target="_blank" href="https://www.uconnected.com.au">ici</a>.`,
     toolIcons: [
       { name: "React Native", icon: "devicon-react-original" },
       { name: "HTML", icon: "devicon-html5-plain" },
@@ -61,14 +61,14 @@ export default [
       { name: "HTML", icon: "devicon-html5-plain" },
       { name: "CSS", icon: "devicon-css3-plain" }
     ],
-    desc: `Tic Tac Toe est une application de React qui permet à l'utilisateur de jouer au célèbre jeu Tic Tac Toe contre l'ordinateur. Le jeu est actuellement imbattable car il utilise l'algorithme Mini Max pour parcourir tous les jeux possibles du jeu. J'ai écrit cette application pour mieux comprendre React et comment animer les modifications apportées aux composants.\n\nVous pouvez trouver le code source et jouer au jeu ici sur <a href="https://codepen.io/mierz/full/BZBymp/">CodePen</a>.`
+    desc: `Tic Tac Toe est une application de React qui permet à l'utilisateur de jouer au célèbre jeu Tic Tac Toe contre l'ordinateur. Le jeu est actuellement imbattable car il utilise l'algorithme Mini Max pour parcourir tous les jeux possibles du jeu. J'ai écrit cette application pour mieux comprendre React et comment animer les modifications apportées aux composants.\n\nVous pouvez trouver le code source et jouer au jeu ici sur <a target="_blank" href="https://codepen.io/mierz/full/BZBymp/">CodePen</a>.`
   },
 
   {
     title: "Simon Game",
     mainImg: require("../../assets/simon-game/1.jpg"),
     imgs: [require("../../assets/simon-game/1.jpg")],
-    desc: `Ceci est ma version du jeu électronique populaire de 1978, Simon, qui teste la mémoire du joueur. Le jeu montre une série de lumières et de sons dans lesquels le joueur doit mémoriser et répéter dans l'ordre. Construit en utilisant jQuery, le jeu consiste en un mode normal qui permet au joueur de faire une erreur puis il répète la dernière séquence. Le mode strict réinitialise le compte à 0 en cas d'erreur.\n\nVous pouvez jouer au jeu et afficher le code source ici à <a href="https: //codepen.io/mierz/pen/RgbaVZ">CodePen</a>.`,
+    desc: `Ceci est ma version du jeu électronique populaire de 1978, Simon, qui teste la mémoire du joueur. Le jeu montre une série de lumières et de sons dans lesquels le joueur doit mémoriser et répéter dans l'ordre. Construit en utilisant jQuery, le jeu consiste en un mode normal qui permet au joueur de faire une erreur puis il répète la dernière séquence. Le mode strict réinitialise le compte à 0 en cas d'erreur.\n\nVous pouvez jouer au jeu et afficher le code source ici à <a target="_blank" href="https: //codepen.io/mierz/pen/RgbaVZ">CodePen</a>.`,
     toolIcons: [
       { name: "jQuery", icon: "devicon-jquery-plain" },
       { name: "JavaScript", icon: "devicon-javascript-plain" },
@@ -87,6 +87,6 @@ export default [
       { name: "CSS", icon: "devicon-css3-plain" },
       { name: "Bootstrap", icon: "devicon-bootstrap-plain" }
     ],
-    desc: `Construite à l'aide de jQuery, cette application Web pour calculatrice a été écrite pour mieux comprendre jQuery et le positionnement des éléments HTML tout en combinant des opérations simples dans une interface utilisateur.\n\nVous pouvez afficher l'application Web <a href="https://codepen.io/mierz/pen/zwEPXp">ici</a>.`
+    desc: `Construite à l'aide de jQuery, cette application Web pour calculatrice a été écrite pour mieux comprendre jQuery et le positionnement des éléments HTML tout en combinant des opérations simples dans une interface utilisateur.\n\nVous pouvez afficher l'application Web <a target="_blank" href="https://codepen.io/mierz/pen/zwEPXp">ici</a>.`
   }
 ];
