@@ -31,7 +31,10 @@ class About extends Component {
             </li>
             <li>
               <strong>{language === "EN" ? "Languages" : "Langues"}</strong>
-              &nbsp;&nbsp;&nbsp;&nbsp;English, French.
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              {language === "EN"
+                ? "English, French."
+                : "Anglais et Français couramment."}
             </li>
           </ul>
 
