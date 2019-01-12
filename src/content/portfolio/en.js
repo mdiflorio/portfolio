@@ -69,7 +69,7 @@ export default [
     title: "Simon Game",
     mainImg: require("../../assets/simon-game/1.jpg"),
     imgs: [require("../../assets/simon-game/1.jpg")],
-    desc: `This is my take on the popular 1978's electronic game Simon which tests the player's memory. The game shows a series of lights and sounds in which the player has to memorise and repeat in sequence. Built using jQuery, the game consists of a normal mode which allows the player to make a mistake and then it will repeat the last sequence. The strict mode resets the count to 0 if any mistake is made.\n\nYou can play the game and view the source code here at <a target="_blank" href=\"https://codepen.io/mierz/pen/RgbaVZ\">CodePen</a>.`,
+    desc: `This is my take on the popular 1978's electronic game Simon which tests the player's memory. The game shows a series of lights and sounds in which the player has to memorise and repeat in sequence. Built using jQuery, the game consists of a normal mode which allows the player to make a mistake and then it will repeat the last sequence. The strict mode resets the count to 0 if any mistake is made.\n\nYou can play the game and view the source code here at <a target="_blank" href="https://codepen.io/mierz/pen/RgbaVZ">CodePen</a>.`,
     toolIcons: [
       { name: "jQuery", icon: "devicon-jquery-plain" },
       { name: "JavaScript", icon: "devicon-javascript-plain" },
