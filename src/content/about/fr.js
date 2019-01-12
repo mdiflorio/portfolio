@@ -1,7 +1,7 @@
 export default {
-  about: `Développeur React Native et informaticien indépendant freelance étudiant au lycée Charles Poncet en France. Une année de expérience spécialisée dans le développement d'applications mobiles avec un projet de niveau de production. Loves UI / UX et fournissant une grande expérience pour les utilisateurs. Aime beaucoup la résolution de problèmes et l'apprentissage nouvelles technologies. Sortant et désireux d'apprendre des autres. Prospère dans un environnement d’équipe et s’adapte rapidement à toutes les situations. Capable de travailler en Australie et dans l’union européenne.`,
+  about: `Développeur et étudiant en BTS informatique au Lycée Charles Poncet (74) souhaitant poursuivre son parcours en Licence Professionnelle par alternance à Lyon. Bilingue en anglais. Fort d'une année d’experience dans le développement d’applications mobiles au sein d’une entreprise de communication, Melbourne, Australie. Aime créer UI / UX pour donner aux utilisateurs une expérience agréable. Passionné par la résolution de problèmes et l’apprentissage de nouvelles technologies. Ouvert d’esprit et désireux d’apprendre des autres. S’épanouit dans un environnement d’équipe et s’adapte rapidement à toutes les situations.`,
 
   interests: `Aime construire de nouveaux produits et travailler avec des équipes de personnes motivées. Aime cuisiner et voyager autour du monde lorsque cela est possible.`,
 
-  seeking: `Actuellement à la recherche d'un emploi en alternance d'un an pour une licence professionnelle en France, 2019-2020.`
+  seeking: `Actuellement à la recherche d'un emploi en alternance d'un an pour une licence professionnelle en France, 2019 - 2020.`
 };

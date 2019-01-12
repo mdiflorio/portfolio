@@ -11,7 +11,7 @@ class About extends Component {
       <div className="container">
         <div className="content-container">
           <img className="profile" src={profileImage} alt="Profile" />
-          <h2>{language === "EN" ? "About me" : "Sommaire"}</h2>
+          <h2>{language === "EN" ? "About me" : "Synthèse"}</h2>
           <p>{content.about}</p>
           <h2>{language === "EN" ? "Skills" : "Compétences"}</h2>
           <ul>
@@ -32,9 +32,7 @@ class About extends Component {
             <li>
               <strong>{language === "EN" ? "Languages" : "Langues"}</strong>
               &nbsp;&nbsp;&nbsp;&nbsp;
-              {language === "EN"
-                ? "English, French."
-                : "Anglais et Français couramment."}
+              {language === "EN" ? "French fluently." : "Bilingue Anglais."}
             </li>
           </ul>
 
