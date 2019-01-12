@@ -5,11 +5,20 @@ import { withRouter } from "react-router-dom";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Axios from "axios";
 
 class App extends Component {
   state = {
     language: "EN"
   };
+
+  componentDidMount() {
+    Axios.get("http://ip-api.com/json/").then(ip_info => {
+      if (ip_info.data.countryCode === "FR") {
+        this.setState({ language: "FR" });
+      }
+    });
+  }
 
   render() {
     const { language } = this.state;
