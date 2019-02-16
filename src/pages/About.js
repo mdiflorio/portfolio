@@ -38,8 +38,6 @@ class About extends Component {
 
           <h2>{language === "EN" ? "Interests" : "Intérêts"}</h2>
           <p>{content.interests}</p>
-          <h2>{language === "EN" ? "Seeking" : "À la recherche de"}</h2>
-          <p>{content.seeking}</p>
         </div>
       </div>
     );
